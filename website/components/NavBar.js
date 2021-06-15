@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import { makeStyles } from "@material-ui/styles";
 import { Button } from "@material-ui/core";
+import { SiteContext } from "../context/siteContext";
 
 const testBorder = "1px dashed black";
 
@@ -35,12 +37,21 @@ const useStyles = makeStyles((theme) => ({
 
 const NavBar = () => {
   const classes = useStyles();
+
+  const { platformElement } = useContext(SiteContext);
+
+  const scrollToPlatform = () => {
+    window.scrollTo({
+      top: platformElement.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className={classes.navBar}>
       <p>MARCO AMARAL FOR SUPERINTENDENT</p>
       <div className={classes.navPagesCont}>
         <a>MEET MARCO</a>
-        <a>PLATFORM</a>
+        <a onClick={scrollToPlatform}>PLATFORM</a>
         <a>CONTACT</a>
         <a>ENDORSEMENTS</a>
         <a

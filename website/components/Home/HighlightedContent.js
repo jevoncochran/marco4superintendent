@@ -45,10 +45,9 @@ const HighlightedContent = () => {
           height="524"
           // style="border:none;overflow:hidden"
           scrolling="no"
-          frameborder="0"
-          allowfullscreen="true"
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          allowFullScreen="true"
+          frameBorder="0"
+          allowFullScreen={true}
+          allow="clipboard-write; encrypted-media; picture-in-picture; web-share"
         ></iframe>
       </div>
     </div>

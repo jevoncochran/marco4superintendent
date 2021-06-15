@@ -1,7 +1,8 @@
+import { useRef, useContext, useEffect } from "react";
 import { makeStyles } from "@material-ui/styles";
 import campaigning4marco from "../../public/images/campaigning4marco.jpeg";
-import { Grid } from "@material-ui/core";
 import { platform } from "../../data/platform";
+import { SiteContext } from "../../context/siteContext";
 
 const useStyles = makeStyles((theme) => ({
   platformContent: {
@@ -66,8 +67,15 @@ const useStyles = makeStyles((theme) => ({
 const Platform = () => {
   const classes = useStyles();
 
+  const { setPlatformElement } = useContext(SiteContext);
+  const platformSection = useRef(null);
+
+  useEffect(() => {
+    setPlatformElement(platformSection);
+  }, []);
+
   return (
-    <div className={classes.platformContent}>
+    <div className={classes.platformContent} ref={platformSection}>
       <div className={classes.platformHeader}>
         <img src={campaigning4marco} className={classes.platformImage} />
         <div className={classes.platformHeaderText}>
