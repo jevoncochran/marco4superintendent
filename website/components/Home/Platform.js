@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
+    textAlign: "center",
   },
   removeDefault: {
     margin: 0,
