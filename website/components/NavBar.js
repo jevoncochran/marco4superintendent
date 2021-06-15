@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     padding: "0 72px",
   },
+  navLogo: { color: "#10294A", fontSize: "16px" },
   navPagesCont: {
     // border: testBorder,
     display: "flex",
@@ -21,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
   },
+  navLink: { cursor: "pointer", color: "#10294A" },
   donateButton: {
     height: "48px",
     width: "96px",
@@ -48,12 +50,14 @@ const NavBar = () => {
   };
   return (
     <div className={classes.navBar}>
-      <p>MARCO AMARAL FOR SUPERINTENDENT</p>
+      <p className={classes.navLogo}>MARCO AMARAL FOR SUPERINTENDENT</p>
       <div className={classes.navPagesCont}>
-        <a>MEET MARCO</a>
-        <a onClick={scrollToPlatform}>PLATFORM</a>
-        <a>CONTACT</a>
-        <a>ENDORSEMENTS</a>
+        <Button className={classes.navLink}>MEET MARCO</Button>
+        <Button className={classes.navLink} onClick={scrollToPlatform}>
+          PLATFORM
+        </Button>
+        <Button className={classes.navLink}>CONTACT</Button>
+        <Button className={classes.navLink}>ENDORSEMENTS</Button>
         <a
           href="https://www.efundraisingconnections.com/c/MarcoAmaral/?fbclid=IwAR0T4s0vyeowehD_A4a3MaWN9obZzCV7nWblk2aop78g8DFroWmBeUwDq30"
           target="_blank"
