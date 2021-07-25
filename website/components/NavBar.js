@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { makeStyles } from "@material-ui/styles";
 import { Button } from "@material-ui/core";
 import { SiteContext } from "../context/siteContext";
+import Link from "next/link";
 
 const testBorder = "1px dashed black";
 
@@ -14,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     padding: "0 72px",
   },
-  navLogo: { color: "#10294A", fontSize: "16px" },
+  navLogo: { color: "#10294A", fontSize: "16px", cursor: "pointer" },
   navPagesCont: {
     // border: testBorder,
     display: "flex",
@@ -50,16 +51,20 @@ const NavBar = () => {
   };
   return (
     <div className={classes.navBar}>
-      <p className={classes.navLogo}>MARCO AMARAL FOR SUPERINTENDENT</p>
+      <Link href="/">
+        <p className={classes.navLogo}>MARCO AMARAL FOR SUPERINTENDENT</p>
+      </Link>
       <div className={classes.navPagesCont}>
-        <Button className={classes.navLink}>MEET MARCO</Button>
+        <Link href="/about">
+          <Button className={classes.navLink}>MEET MARCO</Button>
+        </Link>
         <Button className={classes.navLink} onClick={scrollToPlatform}>
           PLATFORM
         </Button>
         <Button className={classes.navLink}>CONTACT</Button>
         <Button className={classes.navLink}>ENDORSEMENTS</Button>
         <a
-          href="https://www.efundraisingconnections.com/c/MarcoAmaral/?fbclid=IwAR0T4s0vyeowehD_A4a3MaWN9obZzCV7nWblk2aop78g8DFroWmBeUwDq30"
+          href="https://secure.numero.ai/contribute/Marco-Amaral-for-State-Superintendent-of-Public-Instruction-2022?fbclid=IwAR22CquPr-oTRhJjFxlWarhpX4iilCfFv3oOfwQFMdtPwz11iWIuSiVaoCg"
           target="_blank"
           style={{ textDecoration: "none" }}
         >

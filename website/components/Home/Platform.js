@@ -89,7 +89,7 @@ const Platform = () => {
         </div>
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <div container className={classes.platformCont} justify="space-between">
+        <div className={classes.platformCont} justify="space-between">
           {platform.map((item, index) => (
             <div item xs={5} key={index} className={classes.platformItem}>
               <p
