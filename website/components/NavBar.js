@@ -53,7 +53,9 @@ const NavBar = () => {
   return (
     <div className={classes.navBar}>
       <Link href="/">
-        <p className={classes.navLogo}>MARCO AMARAL FOR SUPERINTENDENT</p>
+        <p className={classes.navLogo}>
+          MARCO AMARAL FOR STATE SUPERINTENDENT 2022
+        </p>
       </Link>
       <div className={classes.navPagesCont}>
         <Link href="/about">
