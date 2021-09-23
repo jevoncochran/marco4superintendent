@@ -1,14 +1,12 @@
 import Layout from "../components/Layout";
 import Intro from "../components/Home/Intro";
-import HighlightedContent from "../components/Home/HighlightedContent";
-import Platform from "../components/Home/Platform";
+import JoinThisMovement from "../components/Home/JoinThisMovement";
 
 export default function Home() {
   return (
     <Layout>
       <Intro />
-      <HighlightedContent />
-      <Platform />
+      <JoinThisMovement />
     </Layout>
   );
 }
