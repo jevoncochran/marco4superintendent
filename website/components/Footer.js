@@ -4,6 +4,7 @@ import { IoLogoFacebook } from "react-icons/io";
 import { GrInstagram } from "react-icons/gr";
 import { FaTwitter } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
+import { SocialIcon } from "react-social-icons";
 
 export const useStyles = makeStyles((theme) => ({
   footer: {
@@ -19,7 +20,7 @@ export const useStyles = makeStyles((theme) => ({
   legalDisclaimerDiv: { border: "1px solid #fff", padding: "12px" },
   socialDiv: {
     // border: "1px dashed white",
-    width: "8%",
+    width: "7%",
     display: "flex",
     justifyContent: "space-between",
   },
@@ -47,23 +48,43 @@ const Footer = () => {
           </Typography>
         </div>
         <div className={classes.socialDiv}>
-          <a
+          {/* <a
             className={classes.socialIcon}
             href="https://www.facebook.com/Amaral4Sup2022"
             target="_blank"
             rel="noopener noreferrer"
           >
             <IoLogoFacebook />
-          </a>
-          <div className={classes.socialIcon}>
-            <GrInstagram />
-          </div>
-          <div className={classes.socialIcon}>
-            <FaTwitter />
-          </div>
-          <div className={classes.socialIcon}>
-            <HiOutlineMail />
-          </div>
+          </a> */}
+
+          <SocialIcon
+            url="https://www.facebook.com/Amaral4Sup2022"
+            target="_blank"
+            rel="noopener noreferrer"
+            fgColor="#fff"
+            style={{ height: 30, width: 30 }}
+          />
+          <SocialIcon
+            url="https://www.instagram.com/amaral4sup2022/"
+            target="_blank"
+            rel="noopener noreferrer"
+            fgColor="#fff"
+            style={{ height: 30, width: 30 }}
+          />
+          <SocialIcon
+            url="https://twitter.com/marcodemocracy"
+            target="_blank"
+            rel="noopener noreferrer"
+            fgColor="#fff"
+            style={{ height: 30, width: 30 }}
+          />
+          {/* <SocialIcon
+            network="outlook"
+            target="_blank"
+            rel="noopener noreferrer"
+            fgColor="#fff"
+            style={{ height: 30, width: 30 }}
+          /> */}
         </div>
       </div>
       <div>

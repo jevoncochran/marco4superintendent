@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   navPagesCont: {
     // border: testBorder,
     display: "flex",
-    width: "40%",
+    width: "650px",
     justifyContent: "space-between",
     alignItems: "center",
   },
