@@ -13,6 +13,7 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "36px",
     fontWeight: "bold",
     textTransform: "uppercase",
+    textShadow: "2px 4px #8C2723",
   },
   subText: {
     color: "#8C2723",
@@ -35,8 +36,14 @@ const JoinThisMovement = () => {
           It's time to elect a teacher to be the next Superintendent of Public
           Instruction!
         </Typography>
-        <Typography className={classes.subText}>
+        <Typography className={classes.subText} mb={2}>
           We're going to put the "public" back into public education!
+        </Typography>
+        <Typography
+          className={classes.subText}
+          style={{ color: "#F3D934", fontWeight: "bold" }}
+        >
+          ** Primary Election Date: June 7, 2022 **
         </Typography>
       </div>
     </div>
