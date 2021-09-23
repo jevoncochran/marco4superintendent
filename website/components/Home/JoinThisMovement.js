@@ -32,7 +32,7 @@ const JoinThisMovement = () => {
           Join this movement!
         </Typography>
         <Typography className={classes.subText} mb={2}>
-          It's time to elect a teacher to be the next Superintdent of Public
+          It's time to elect a teacher to be the next Superintendent of Public
           Instruction!
         </Typography>
         <Typography className={classes.subText}>
