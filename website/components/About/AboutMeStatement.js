@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   aboutme: {
     padding: "0 24px",
   },
-  text: { marginBottom: "12px" },
+  text: { marginBottom: "12px", color: "#8C2723" },
   imgCont: { display: "flex", justifyContent: "center", marginBottom: "12px" },
 }));
 

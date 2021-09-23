@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/styles";
 import marco4sup from "../../public/images/marco_for_superintendent.jpeg";
+import marcoCampaignCover from "../../public/images/campaign-cover-photo.jpg";
 
 export const useStyles = makeStyles((theme) => ({
   intro: {
@@ -15,7 +16,7 @@ const Intro = () => {
   return (
     <div
       className={classes.intro}
-      style={{ backgroundImage: `url(${marco4sup})` }}
+      style={{ backgroundImage: `url(${marcoCampaignCover})` }}
     ></div>
   );
   // <img src={marco4sup} className={classes.introImg} />;

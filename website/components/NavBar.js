@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     padding: "0 72px",
   },
-  navLogo: { color: "#10294A", fontSize: "16px", cursor: "pointer" },
+  navLogo: { color: "#8C2723", fontSize: "16px", cursor: "pointer" },
   navPagesCont: {
     // border: testBorder,
     display: "flex",
@@ -23,17 +23,18 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
   },
-  navLink: { cursor: "pointer", color: "#10294A" },
+  navLink: { cursor: "pointer", color: "#8C2723" },
   donateButton: {
     height: "48px",
     width: "96px",
-    backgroundColor: "#10294A",
+    backgroundColor: "#F3D934",
     border: "none",
     borderRadius: "6px",
-    color: "#fff",
+    color: "#8C2723",
     fontWeight: "700",
     "&:hover": {
-      backgroundColor: "#10294A",
+      backgroundColor: "#8C2723",
+      color: "#F3D934",
     },
   },
 }));
@@ -58,9 +59,9 @@ const NavBar = () => {
         <Link href="/about">
           <Button className={classes.navLink}>MEET MARCO</Button>
         </Link>
-        <Button className={classes.navLink} onClick={scrollToPlatform}>
-          PLATFORM
-        </Button>
+        <Link href="/platform">
+          <Button className={classes.navLink}>PLATFORM</Button>
+        </Link>
         <Button className={classes.navLink}>CONTACT</Button>
         <Button className={classes.navLink}>ENDORSEMENTS</Button>
         <a
