@@ -1,6 +1,5 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { makeStyles } from "@material-ui/styles";
-// import { Button } from "@material-ui/core";
 import { Button, IconButton } from "@mui/material";
 import { SiteContext } from "../context/siteContext";
 import Link from "next/link";
@@ -72,9 +71,19 @@ const NavBar = () => {
   const windowSize = useWindowSize();
   const desktop = windowSize.width > 500;
   return (
-    <div className={classes.navBar}>
+    <div
+      className={classes.navBar}
+      style={{
+        justifyContent: desktop ? "space-between" : "flex-end",
+        padding: desktop ? "0 72px" : "0 12px",
+      }}
+    >
       <Link href="/">
-        <p className={classes.navLogo} onClick={deactivateMobileNav}>
+        <p
+          className={classes.navLogo}
+          onClick={deactivateMobileNav}
+          style={{ display: desktop ? "flex" : "none" }}
+        >
           MARCO AMARAL FOR STATE SUPERINTENDENT 2022
         </p>
       </Link>
@@ -89,6 +98,15 @@ const NavBar = () => {
           left: desktop ? 0 : 0,
         }}
       >
+        <Link href="/">
+          <Button
+            className={desktop ? classes.navLink : classes.navLinkMobile}
+            style={{ display: desktop ? "none" : "flex" }}
+            onClick={deactivateMobileNav}
+          >
+            HOME
+          </Button>
+        </Link>
         <Link href="/about">
           <Button
             className={desktop ? classes.navLink : classes.navLinkMobile}
@@ -143,7 +161,7 @@ const NavBar = () => {
         <IconButton
           onClick={mobileNavActive ? deactivateMobileNav : activateMobileNav}
         >
-          <MenuIcon />
+          <MenuIcon style={{ height: "50px", width: "50px" }} />
         </IconButton>
       )}
     </div>
