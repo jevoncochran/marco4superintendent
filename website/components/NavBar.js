@@ -161,7 +161,9 @@ const NavBar = () => {
         <IconButton
           onClick={mobileNavActive ? deactivateMobileNav : activateMobileNav}
         >
-          <MenuIcon style={{ height: "50px", width: "50px" }} />
+          <MenuIcon
+            style={{ height: "50px", width: "50px", color: "#8C2723" }}
+          />
         </IconButton>
       )}
     </div>
