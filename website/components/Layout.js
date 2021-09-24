@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Head from "next/head";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
@@ -9,7 +9,13 @@ const Layout = (props) => {
   const windowSize = useWindowSize();
   const desktop = windowSize.width > 500;
 
-  const { mobileNavActive } = useContext(SiteContext);
+  const { mobileNavActive, deactivateMobileNav } = useContext(SiteContext);
+
+  useEffect(() => {
+    if (desktop) {
+      deactivateMobileNav();
+    }
+  }, [desktop]);
 
   return (
     <div>
@@ -26,7 +32,7 @@ const Layout = (props) => {
         </div>
       )}
       {mobileNavActive && (
-        <div style={{ height: "93vh", backgroundColor: "#8C2723" }}></div>
+        <div style={{ height: "85vh", backgroundColor: "#8C2723" }}></div>
       )}
     </div>
   );
