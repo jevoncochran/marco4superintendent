@@ -59,7 +59,7 @@ const Footer = () => {
         </Box>
         <div
           className={classes.socialDiv}
-          style={{ width: desktop ? "7%" : "35%" }}
+          style={{ width: desktop ? "7%" : "50%" }}
         >
           <SocialIcon
             url="https://www.facebook.com/Amaral4Sup2022"
