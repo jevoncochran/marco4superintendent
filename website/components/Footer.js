@@ -1,10 +1,9 @@
 import { makeStyles } from "@material-ui/styles";
-import Typography from "@mui/material/Typography";
-import { IoLogoFacebook } from "react-icons/io";
-import { GrInstagram } from "react-icons/gr";
-import { FaTwitter } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
+import { Typography, Box } from "@mui/material";
 import { SocialIcon } from "react-social-icons";
+import useWindowSize from "../utils/useWindowSize";
+
+const testBorder = "1px dashed black";
 
 export const useStyles = makeStyles((theme) => ({
   footer: {
@@ -12,12 +11,17 @@ export const useStyles = makeStyles((theme) => ({
     padding: "24px",
   },
   topDiv: {
+    // border: testBorder,
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     marginBottom: "32px",
   },
-  legalDisclaimerDiv: { border: "1px solid #fff", padding: "12px" },
+  legalDisclaimerDiv: {
+    border: "1px solid #fff",
+    padding: "12px",
+    textAlign: "center",
+  },
   socialDiv: {
     // border: "1px dashed white",
     width: "7%",
@@ -25,8 +29,8 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
   },
   socialIcon: {
-    fontSize: "24px",
-    color: "#fff",
+    // fontSize: "50px",
+    // color: "#fff",
     cursor: "pointer",
   },
   donationDisclaimer: { fontSize: "12px", color: "#fff", textAlign: "center" },
@@ -35,56 +39,50 @@ export const useStyles = makeStyles((theme) => ({
 const Footer = () => {
   const classes = useStyles();
 
+  const windowSize = useWindowSize();
+  const desktop = windowSize.width > 500;
+
   return (
     <div className={classes.footer}>
-      <div className={classes.topDiv}>
-        <Typography style={{ color: "#fff" }}>
+      <div
+        className={classes.topDiv}
+        style={{ flexDirection: desktop ? "row" : "column" }}
+      >
+        <Typography style={{ color: "#fff" }} mb={desktop ? 0 : 2}>
           MARCO AMARAL FOR SUPERINTENDENT
         </Typography>
-        <div className={classes.legalDisclaimerDiv}>
+        <Box className={classes.legalDisclaimerDiv} mb={desktop ? 0 : 2}>
           <Typography style={{ color: "#fff" }}>
             Paid for by Marco Amaral for State Superintendent of Public
             Instruction 2022 FPPC ID 1437503
           </Typography>
-        </div>
-        <div className={classes.socialDiv}>
-          {/* <a
-            className={classes.socialIcon}
-            href="https://www.facebook.com/Amaral4Sup2022"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <IoLogoFacebook />
-          </a> */}
-
+        </Box>
+        <div
+          className={classes.socialDiv}
+          style={{ width: desktop ? "7%" : "35%" }}
+        >
           <SocialIcon
             url="https://www.facebook.com/Amaral4Sup2022"
             target="_blank"
             rel="noopener noreferrer"
             fgColor="#fff"
-            style={{ height: 30, width: 30 }}
+            className={classes.socialIcon}
+            style={{ height: desktop ? 30 : 40, width: desktop ? 30 : 40 }}
           />
           <SocialIcon
             url="https://www.instagram.com/amaral4sup2022/"
             target="_blank"
             rel="noopener noreferrer"
             fgColor="#fff"
-            style={{ height: 30, width: 30 }}
+            style={{ height: desktop ? 30 : 40, width: desktop ? 30 : 40 }}
           />
           <SocialIcon
             url="https://twitter.com/marcodemocracy"
             target="_blank"
             rel="noopener noreferrer"
             fgColor="#fff"
-            style={{ height: 30, width: 30 }}
+            style={{ height: desktop ? 30 : 40, width: desktop ? 30 : 40 }}
           />
-          {/* <SocialIcon
-            network="outlook"
-            target="_blank"
-            rel="noopener noreferrer"
-            fgColor="#fff"
-            style={{ height: 30, width: 30 }}
-          /> */}
         </div>
       </div>
       <div>
