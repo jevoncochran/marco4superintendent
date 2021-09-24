@@ -1,12 +1,24 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState } from "react";
 
 const SiteContext = createContext();
 
 const SiteProvider = (props) => {
   const [platformElement, setPlatformElement] = useState(null);
+  // const [desktop, setDesktop] = useState(false);
+  const [mobileNavActive, setMobileNavActive] = useState(false);
+
+  const activateMobileNav = () => {
+    setMobileNavActive(true);
+  };
+
+  const deactivateMobileNav = () => {
+    setMobileNavActive(false);
+  };
 
   return (
-    <SiteContext.Provider value={{ platformElement, setPlatformElement }}>
+    <SiteContext.Provider
+      value={{ mobileNavActive, activateMobileNav, deactivateMobileNav }}
+    >
       {props.children}
     </SiteContext.Provider>
   );

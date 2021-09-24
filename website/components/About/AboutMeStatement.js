@@ -4,22 +4,40 @@ import marcoTeacherBadge from "../../public/images/marco_teacher_badge.png";
 import marcoStudents from "../../public/images/marco_students.png";
 import teacherMarco from "../../public/images/teacher_marco.png";
 import marcoAtEvent from "../../public/images/marco_at_event.png";
+import useWindowSize from "../../utils/useWindowSize";
 
 const useStyles = makeStyles((theme) => ({
   aboutme: {
     padding: "0 24px",
   },
+  heading: {
+    marginBottom: "12px",
+    color: "#8C2723",
+    textTransform: "uppercase",
+  },
+  headingMobile: {
+    marginBottom: "12px",
+    color: "#8C2723",
+    textTransform: "uppercase",
+    textAlign: "center",
+  },
   text: { marginBottom: "12px", color: "#8C2723" },
+  textMobile: { marginBottom: "12px", color: "#8C2723", textAlign: "center" },
   imgCont: { display: "flex", justifyContent: "center", marginBottom: "12px" },
 }));
 
 export default function AboutMeSection() {
   const classes = useStyles();
 
+  const windowSize = useWindowSize();
+  const desktop = windowSize.width > 500;
+
   return (
     <div className={classes.aboutme}>
-      <h2 className={classes.text}>How did I get here?</h2>
-      <p className={classes.text}>
+      <h2 className={desktop ? classes.heading : classes.headingMobile}>
+        How did I get here?
+      </h2>
+      <p className={desktop ? classes.text : classes.textMobile}>
         I was raised in a working-class community in East Las Vegas where
         collaboration among neighbors was not just a means of building
         community, it was a means of survival. My parents, Yolanda Valencia and
@@ -34,7 +52,7 @@ export default function AboutMeSection() {
         the difficult decision of moving me out of Las Vegas and back to San
         Diego.{" "}
       </p>
-      <p className={classes.text}>
+      <p className={desktop ? classes.text : classes.textMobile}>
         In San Diego, I moved in with my eldest brother. I eventually graduated
         from Mar Vista High School in 2009 as one of the first Gates Millennium
         Scholars in my school district’s history. I went on to obtain my
@@ -46,7 +64,7 @@ export default function AboutMeSection() {
         various conferences, engage with some of the leading scholars of our
         time, and work with educators and students from around the country.{" "}
       </p>
-      <p className={classes.text}>
+      <p className={desktop ? classes.text : classes.textMobile}>
         I am the first person in my family to graduate from our University of
         California system, pursue a Doctoral degree, and to be an elected
         official. None of this could have been remotely possible without the
@@ -60,7 +78,7 @@ export default function AboutMeSection() {
       <div className={classes.imgCont}>
         <img src={marco2018CampaignPic} style={{ height: "480px" }} />
       </div>
-      <p className={classes.text}>
+      <p className={desktop ? classes.text : classes.textMobile}>
         A pivotal moment in my life, like in the life of millions, was the
         2008-2009 Great Recession. In 2002, my parents finally obtained their
         dream - they were able to obtain their first home and in 6 short years
@@ -75,7 +93,7 @@ export default function AboutMeSection() {
         collective action through her work in her union, it was during this time
         that my life as an organizer and activist began.
       </p>
-      <p className={classes.text}>
+      <p className={desktop ? classes.text : classes.textMobile}>
         Since the financial crash of 2008-2009 I have fought for the belief that
         a better, more just, more dignified, and more loving world is not only
         possible, but necessary. As an Abolitionist, I have advocated for the
@@ -89,7 +107,7 @@ export default function AboutMeSection() {
         lives. These life experiences are what brings me to run as your next
         California Superintendent of Public Instruction.{" "}
       </p>
-      <p className={classes.text}>
+      <p className={desktop ? classes.text : classes.textMobile}>
         In 2022 I will marry the love of my life, Arcelia Magaña. Having the
         opportunity to be with her has been my greatest achievement of my life.
         Together, we wish to one day form a family. I am embarking on this
@@ -102,8 +120,10 @@ export default function AboutMeSection() {
       <div className={classes.imgCont}>
         <img src={marcoStudents} style={{ width: "700px" }} />
       </div>
-      <h2 className={classes.text}>The Vision</h2>
-      <p className={classes.text}>
+      <h2 className={desktop ? classes.heading : classes.headingMobile}>
+        The Vision
+      </h2>
+      <p className={desktop ? classes.text : classes.textMobile}>
         This campaign believes that it can challenge the California political
         machine, led by our two corporate parties, in a meaningful, politically
         principled, and community orientated fashion to create history. Put
@@ -117,7 +137,7 @@ export default function AboutMeSection() {
       <div className={classes.imgCont}>
         <img src={teacherMarco} style={{ height: "480px" }} />
       </div>
-      <p className={classes.text}>
+      <p className={desktop ? classes.text : classes.textMobile}>
         On June 7th, 2022, the people of this beautiful state will have the
         opportunity to choose between a career Democrat and a Teacher for State
         Superintendent of Public Instruction. Our students, our families, and
@@ -126,7 +146,7 @@ export default function AboutMeSection() {
         to the people of the state, to the best interests of our students, to
         respecting the education profession.{" "}
       </p>
-      <p className={classes.text}>
+      <p className={desktop ? classes.text : classes.textMobile}>
         The Superintendent position is a “Bully-Pulpit” position. It is the only
         position in the state’s constitution that is meant to be embodied by
         someone not affiliated with any political party. The sad reality is that
@@ -139,7 +159,7 @@ export default function AboutMeSection() {
         are afraid of disrupting the current political structure and start
         electing candidates that only answer to one group, the people.{" "}
       </p>
-      <p className={classes.text}>
+      <p className={desktop ? classes.text : classes.textMobile}>
         Our campaign platform embodies the intersection of society and
         education. It represents the demands of our current social
         movements.There are some who will call our campaign radical and, in all
@@ -153,7 +173,7 @@ export default function AboutMeSection() {
       <div className={classes.imgCont}>
         <img src={marcoAtEvent} style={{ height: "480px" }} />
       </div>
-      <p className={classes.text}>
+      <p className={desktop ? classes.text : classes.textMobile}>
         Unlike the incumbent, I won’t hesitate to publically hold Governor
         Newsom and President Biden accountable; I won’t disrespect grassroot
         movements and educators; I will help organize, mobilize, and

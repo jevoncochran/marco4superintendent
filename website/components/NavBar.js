@@ -1,8 +1,11 @@
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { makeStyles } from "@material-ui/styles";
-import { Button } from "@material-ui/core";
+// import { Button } from "@material-ui/core";
+import { Button, IconButton } from "@mui/material";
 import { SiteContext } from "../context/siteContext";
 import Link from "next/link";
+import MenuIcon from "@mui/icons-material/Menu";
+import useWindowSize from "../utils/useWindowSize";
 
 const testBorder = "1px dashed black";
 
@@ -15,7 +18,12 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     padding: "0 72px",
   },
-  navLogo: { color: "#8C2723", fontSize: "16px", cursor: "pointer" },
+  navLogo: {
+    // border: testBorder,
+    color: "#8C2723",
+    fontSize: "16px",
+    cursor: "pointer",
+  },
   navPagesCont: {
     // border: testBorder,
     display: "flex",
@@ -24,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   navLink: { cursor: "pointer", color: "#8C2723" },
+  navLinkMobile: { cursor: "pointer", color: "#fff", fontSize: "36px" },
   donateButton: {
     height: "48px",
     width: "96px",
@@ -37,43 +46,106 @@ const useStyles = makeStyles((theme) => ({
       color: "#F3D934",
     },
   },
+  donateButtonMobile: {
+    height: "96px",
+    width: "192px",
+    backgroundColor: "#F3D934",
+    border: "none",
+    borderRadius: "6px",
+    color: "#8C2723",
+    fontSize: "30px",
+    fontWeight: "700",
+    marginTop: "24px",
+    "&:hover": {
+      backgroundColor: "#8C2723",
+      color: "#F3D934",
+    },
+  },
 }));
 
 const NavBar = () => {
   const classes = useStyles();
 
-  const { platformElement } = useContext(SiteContext);
+  const { mobileNavActive, activateMobileNav, deactivateMobileNav } =
+    useContext(SiteContext);
 
-  const scrollToPlatform = () => {
-    window.scrollTo({
-      top: platformElement.current.offsetTop,
-      behavior: "smooth",
-    });
-  };
+  const windowSize = useWindowSize();
+  const desktop = windowSize.width > 500;
   return (
     <div className={classes.navBar}>
       <Link href="/">
-        <p className={classes.navLogo}>
+        <p className={classes.navLogo} onClick={deactivateMobileNav}>
           MARCO AMARAL FOR STATE SUPERINTENDENT 2022
         </p>
       </Link>
-      <div className={classes.navPagesCont}>
+      <div
+        className={classes.navPagesCont}
+        style={{
+          display: desktop ? "flex" : mobileNavActive ? "flex" : "none",
+          flexDirection: desktop ? "row" : "column",
+          width: desktop ? "650px" : "100%",
+          position: desktop ? "static" : "absolute",
+          top: "10%",
+          left: desktop ? 0 : 0,
+        }}
+      >
         <Link href="/about">
-          <Button className={classes.navLink}>MEET MARCO</Button>
+          <Button
+            className={desktop ? classes.navLink : classes.navLinkMobile}
+            onClick={deactivateMobileNav}
+          >
+            MEET MARCO
+          </Button>
         </Link>
         <Link href="/platform">
-          <Button className={classes.navLink}>PLATFORM</Button>
+          <Button
+            className={desktop ? classes.navLink : classes.navLinkMobile}
+            onClick={deactivateMobileNav}
+          >
+            {" "}
+            PLATFORM
+          </Button>
         </Link>
-        <Button className={classes.navLink}>CONTACT</Button>
-        <Button className={classes.navLink}>ENDORSEMENTS</Button>
+        <Link href="/">
+          <Button
+            className={desktop ? classes.navLink : classes.navLinkMobile}
+            onClick={deactivateMobileNav}
+          >
+            {" "}
+            CONTACT
+          </Button>
+        </Link>
+        <Link href="/">
+          <Button
+            className={desktop ? classes.navLink : classes.navLinkMobile}
+            onClick={deactivateMobileNav}
+          >
+            {" "}
+            ENDORSEMENTS
+          </Button>
+        </Link>
         <a
           href="https://secure.numero.ai/contribute/Marco-Amaral-for-State-Superintendent-of-Public-Instruction-2022?fbclid=IwAR22CquPr-oTRhJjFxlWarhpX4iilCfFv3oOfwQFMdtPwz11iWIuSiVaoCg"
           target="_blank"
           style={{ textDecoration: "none" }}
         >
-          <Button className={classes.donateButton}>DONATE</Button>
+          <Button
+            className={
+              desktop ? classes.donateButton : classes.donateButtonMobile
+            }
+            onClick={deactivateMobileNav}
+          >
+            DONATE
+          </Button>
         </a>
       </div>
+      {!desktop && (
+        <IconButton
+          onClick={mobileNavActive ? deactivateMobileNav : activateMobileNav}
+        >
+          <MenuIcon />
+        </IconButton>
+      )}
     </div>
   );
 };

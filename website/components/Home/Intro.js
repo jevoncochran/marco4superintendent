@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/styles";
-import marco4sup from "../../public/images/marco_for_superintendent.jpeg";
 import marcoCampaignCover from "../../public/images/campaign-cover-photo.jpg";
+import useWindowSize from "../../utils/useWindowSize";
 
 export const useStyles = makeStyles((theme) => ({
   intro: {
@@ -13,13 +13,19 @@ export const useStyles = makeStyles((theme) => ({
 
 const Intro = () => {
   const classes = useStyles();
+
+  const windowSize = useWindowSize();
+  const desktop = windowSize.width > 500;
+
   return (
     <div
       className={classes.intro}
-      style={{ backgroundImage: `url(${marcoCampaignCover})` }}
+      style={{
+        backgroundImage: `url(${marcoCampaignCover})`,
+        backgroundPosition: desktop ? "0 10%" : "-125px 0",
+      }}
     ></div>
   );
-  // <img src={marco4sup} className={classes.introImg} />;
 };
 
 export default Intro;
