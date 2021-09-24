@@ -5,12 +5,13 @@ import { SiteContext } from "../context/siteContext";
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
 import useWindowSize from "../utils/useWindowSize";
+import marcoCampaignLogo from "../public/images/marco_campaign_logo.jpeg";
 
 const testBorder = "1px dashed black";
 
 const useStyles = makeStyles((theme) => ({
   navBar: {
-    height: "7vh",
+    height: "15vh",
     width: "100%",
     display: "flex",
     justifyContent: "space-between",
@@ -18,9 +19,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "0 72px",
   },
   navLogo: {
-    // border: testBorder,
-    color: "#8C2723",
-    fontSize: "16px",
+    height: "100px",
     cursor: "pointer",
   },
   navPagesCont: {
@@ -74,18 +73,15 @@ const NavBar = () => {
     <div
       className={classes.navBar}
       style={{
-        justifyContent: desktop ? "space-between" : "flex-end",
         padding: desktop ? "0 72px" : "0 12px",
       }}
     >
       <Link href="/">
-        <p
+        <img
+          src={marcoCampaignLogo}
           className={classes.navLogo}
           onClick={deactivateMobileNav}
-          style={{ display: desktop ? "flex" : "none" }}
-        >
-          MARCO AMARAL FOR STATE SUPERINTENDENT 2022
-        </p>
+        />
       </Link>
       <div
         className={classes.navPagesCont}
@@ -94,7 +90,7 @@ const NavBar = () => {
           flexDirection: desktop ? "row" : "column",
           width: desktop ? "650px" : "100%",
           position: desktop ? "static" : "absolute",
-          top: "10%",
+          top: "130px",
           left: desktop ? 0 : 0,
         }}
       >
