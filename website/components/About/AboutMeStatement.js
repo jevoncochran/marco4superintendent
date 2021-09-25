@@ -38,6 +38,16 @@ export default function AboutMeSection() {
         How did I get here?
       </h2>
       <p className={desktop ? classes.text : classes.textMobile}>
+        I was born in Escondido, California. From the time I was born to the age
+        of 3, my family moved around San Diego County in search for stable
+        employment. Eventually, my parents decided that a family move to Las
+        Vegas was best for us. San Diego was simply no longer an economically
+        feasible place for my parents to raise their kids. Due to the booming
+        construction and hotel service industry in Las Vegas, coupled with the
+        relatively low cost of living, we packed our bags and moved out of
+        state.
+      </p>
+      <p className={desktop ? classes.text : classes.textMobile}>
         I was raised in a working-class community in East Las Vegas where
         collaboration among neighbors was not just a means of building
         community, it was a means of survival. My parents, Yolanda Valencia and
