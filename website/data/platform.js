@@ -32,7 +32,7 @@ export const platform = [
     point:
       "Respect Ethnic Studies and The Movement. Gender and Women Studies, Now!",
     text: [
-      "The California Ethnic Studies Now Coalition and their work must be respected. Our current Superintendent has shown an inability to respect a liberated Ethnic Studies Curriculum. We need Ethnic Studies from Kindergarten to our Ph.D. programs and everywhere in between. The Department of Education will follow the leadership of the grassroots movements. We will hold Governor Newsome accountable; we will impose pressure from below and above; we will get an Ethnic Studies Curriculum that represents the full pedagogical tenets of Ethnic Studies. We won’t be puppets of the Governor.",
+      "The California Ethnic Studies Now Coalition and their work must be respected. Our current Superintendent has shown an inability to respect a liberated Ethnic Studies Curriculum. We need Ethnic Studies from Kindergarten to our Ph.D. programs and everywhere in between. The Department of Education will follow the leadership of the grassroots movements. We will hold Governor Newsom accountable; we will impose pressure from below and above; we will get an Ethnic Studies Curriculum that represents the full pedagogical tenets of Ethnic Studies. We won’t be puppets of the Governor.",
       "In similar fashion to Ethnic Studies, the DOE will develop a pathway to implement a Gender, Queer and Women Studies curriculum in our K-Grad Schools through the leadership of those at the forefront of this educational movement. Education is the practice of freedom. If we believe this, then we believe that education should facilitate the liberation of all our students and families.",
     ],
   },
