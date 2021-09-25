@@ -20,7 +20,7 @@ const Layout = (props) => {
   return (
     <div>
       <Head>
-        <title>Marco For Superintendent</title>
+        <title>Marco For State Superintendent</title>
       </Head>
       <NavBar />
       {!mobileNavActive && (
