@@ -1,9 +1,4 @@
 import { makeStyles } from "@material-ui/styles";
-import marco2018CampaignPic from "../../public/images/marco_2018_campaign_pic.png";
-import marcoTeacherBadge from "../../public/images/marco_teacher_badge.png";
-import marcoStudents from "../../public/images/marco_students.png";
-import teacherMarco from "../../public/images/teacher_marco.png";
-import marcoAtEvent from "../../public/images/marco_at_event.png";
 import useWindowSize from "../../utils/useWindowSize";
 
 const useStyles = makeStyles((theme) => ({
@@ -86,7 +81,10 @@ export default function AboutMeSection() {
         various community organizations and collectives.
       </p>
       <div className={classes.imgCont}>
-        <img src={marco2018CampaignPic} style={{ height: "480px" }} />
+        <img
+          src="/images/marco_2018_campaign_pic.png"
+          style={{ height: "480px" }}
+        />
       </div>
       <p className={desktop ? classes.text : classes.textMobile}>
         A pivotal moment in my life, like in the life of millions, was the
@@ -125,10 +123,13 @@ export default function AboutMeSection() {
         the schools our families will interact with.
       </p>
       <div className={classes.imgCont}>
-        <img src={marcoTeacherBadge} style={{ height: "400px" }} />
+        <img
+          src="/images/marco_teacher_badge.png"
+          style={{ height: "400px" }}
+        />
       </div>
       <div className={classes.imgCont}>
-        <img src={marcoStudents} style={{ width: "700px" }} />
+        <img src="/images/marco_students.png" style={{ width: "700px" }} />
       </div>
       <h2 className={desktop ? classes.heading : classes.headingMobile}>
         The Vision
@@ -145,7 +146,7 @@ export default function AboutMeSection() {
         Republican to be elected to this position.{" "}
       </p>
       <div className={classes.imgCont}>
-        <img src={teacherMarco} style={{ height: "480px" }} />
+        <img src="/images/teacher_marco.png" style={{ height: "480px" }} />
       </div>
       <p className={desktop ? classes.text : classes.textMobile}>
         On June 7th, 2022, the people of this beautiful state will have the
@@ -181,7 +182,7 @@ export default function AboutMeSection() {
         community.
       </p>
       <div className={classes.imgCont}>
-        <img src={marcoAtEvent} style={{ height: "480px" }} />
+        <img src="/images/marco_at_event.png" style={{ height: "480px" }} />
       </div>
       <p className={desktop ? classes.text : classes.textMobile}>
         Unlike the incumbent, I won’t hesitate to publically hold Governor
