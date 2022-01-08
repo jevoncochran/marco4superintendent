@@ -29,8 +29,6 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
   },
   socialIcon: {
-    // fontSize: "50px",
-    // color: "#fff",
     cursor: "pointer",
   },
   donationDisclaimer: { fontSize: "12px", color: "#fff", textAlign: "center" },
@@ -77,7 +75,7 @@ const Footer = () => {
             style={{ height: desktop ? 30 : 40, width: desktop ? 30 : 40 }}
           />
           <SocialIcon
-            url="https://twitter.com/marcodemocracy"
+            url="https://twitter.com/Amaral4Sup2022 "
             target="_blank"
             rel="noopener noreferrer"
             fgColor="#fff"

@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/styles";
-import marcoCampaignCover from "../../public/images/campaign-cover-photo.jpg";
 import useWindowSize from "../../utils/useWindowSize";
 
 export const useStyles = makeStyles((theme) => ({
@@ -21,7 +20,7 @@ const Intro = () => {
     <div
       className={classes.intro}
       style={{
-        backgroundImage: `url(${marcoCampaignCover})`,
+        backgroundImage: `url(/images/campaign-cover-photo.jpeg)`,
         backgroundPosition: desktop ? "0 10%" : "-125px 0",
       }}
     ></div>

@@ -5,7 +5,6 @@ import { SiteContext } from "../context/siteContext";
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
 import useWindowSize from "../utils/useWindowSize";
-import marcoCampaignLogo from "../public/images/marco_campaign_logo.jpeg";
 
 const testBorder = "1px dashed black";
 
@@ -78,7 +77,7 @@ const NavBar = () => {
     >
       <Link href="/">
         <img
-          src={marcoCampaignLogo}
+          src="/images/marco_campaign_logo.jpeg"
           className={classes.navLogo}
           onClick={deactivateMobileNav}
         />

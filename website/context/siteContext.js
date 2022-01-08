@@ -4,8 +4,8 @@ const SiteContext = createContext();
 
 const SiteProvider = (props) => {
   const [platformElement, setPlatformElement] = useState(null);
-  // const [desktop, setDesktop] = useState(false);
   const [mobileNavActive, setMobileNavActive] = useState(false);
+  const [hideDonatePopover, setHideDonatePopover] = useState(null);
 
   const activateMobileNav = () => {
     setMobileNavActive(true);
@@ -15,9 +15,19 @@ const SiteProvider = (props) => {
     setMobileNavActive(false);
   };
 
+  const closeDonatePopover = () => {
+    setHideDonatePopover(true);
+  };
+
   return (
     <SiteContext.Provider
-      value={{ mobileNavActive, activateMobileNav, deactivateMobileNav }}
+      value={{
+        mobileNavActive,
+        activateMobileNav,
+        deactivateMobileNav,
+        hideDonatePopover,
+        closeDonatePopover,
+      }}
     >
       {props.children}
     </SiteContext.Provider>
