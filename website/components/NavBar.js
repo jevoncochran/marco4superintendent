@@ -128,12 +128,11 @@ const NavBar = () => {
             CONTACT
           </Button>
         </Link>
-        <Link href="/">
+        <Link href="/endorsements">
           <Button
             className={desktop ? classes.navLink : classes.navLinkMobile}
             onClick={deactivateMobileNav}
           >
-            {" "}
             ENDORSEMENTS
           </Button>
         </Link>
