@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/styles";
 import useWindowSize from "../../utils/useWindowSize";
+import Image from "next/image";
 
 export const useStyles = makeStyles((theme) => ({
   intro: {
@@ -24,6 +25,9 @@ const Intro = () => {
         backgroundPosition: desktop ? "0 10%" : "-125px 0",
       }}
     ></div>
+    // <>
+    //   <Image src="/images/campaign-cover-photo.jpeg" layout="fill" />
+    // </>
   );
 };
 
