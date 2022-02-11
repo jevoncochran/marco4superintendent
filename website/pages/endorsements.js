@@ -26,7 +26,7 @@ const endorsements = [
   "Jennifer Blanco, Trustee San Bruno Park School District",
   "Labor Council for Latin American Advancement - Sacramento AFL-CIO Chapter",
   "Ricardo Quintana Favela, Trustee Fallbrook Union School District",
-  "  San Diego La Raza Lawyers Association",
+  "San Diego La Raza Lawyers Association",
   "Teri L. Chavez, Trustee San Bruno Park School District",
   "Oscar Caralampio, Trustee Fallbrook Union High School District",
 ];
@@ -59,7 +59,7 @@ const Endorsements = () => {
       >
         <Box display="flex" flexDirection="column" alignItems="left">
           <ul style={{ listStyle: "none" }}>
-            {endorsements.map((endorsement) => (
+            {endorsements.sort().map((endorsement) => (
               <li
                 key={endorsement}
                 style={{ marginBottom: "12px", fontSize: "16px" }}
