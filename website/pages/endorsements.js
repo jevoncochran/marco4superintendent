@@ -17,6 +17,18 @@ const endorsements = [
   "Labor and Community for an Independent Party",
   "Lupe Gallegos-Diaz, Director Chicanx Latinx Student Development Center at University of California, Berkeley",
   "Tasha Williamson, San Diego Community Organizer",
+  "California Peace and Freedom Party",
+  "Green Party of Alameda County",
+  "Green Party of Fresno County",
+  "Green Party of San Diego County",
+  "Green Party of San Francisco County",
+  "Jason Boxer, Trustee Manhattan Beach Unified School District",
+  "Jennifer Blanco, Trustee San Bruno Park School District",
+  "Labor Council for Latin American Advancement - Sacramento AFL-CIO Chapter",
+  "Ricardo Quintana Favela, Trustee Fallbrook Union School District",
+  "  San Diego La Raza Lawyers Association",
+  "Teri L. Chavez, Trustee San Bruno Park School District",
+  "Oscar Caralampio, Trustee Fallbrook Union High School District",
 ];
 
 const Endorsements = () => {
@@ -45,17 +57,23 @@ const Endorsements = () => {
           padding: "24px",
         }}
       >
-        {endorsements.map((endorsement) => (
-          <li
-            key={endorsement}
-            style={{ marginBottom: "12px", fontSize: "16px" }}
+        <Box display="flex" flexDirection="column" alignItems="left">
+          <ul style={{ listStyle: "none" }}>
+            {endorsements.map((endorsement) => (
+              <li
+                key={endorsement}
+                style={{ marginBottom: "12px", fontSize: "16px" }}
+              >
+                {endorsement}
+              </li>
+            ))}
+          </ul>
+          <Typography
+            sx={{ fontSize: "16px", marginTop: "12px", textAlign: "center" }}
           >
-            {endorsement}
-          </li>
-        ))}
-        <Typography sx={{ fontSize: "16px", marginTop: "12px" }}>
-          More endorsements to come! Stay Tuned!{" "}
-        </Typography>
+            More endorsements to come! Stay Tuned!{" "}
+          </Typography>
+        </Box>
       </Box>
     </Layout>
   );
