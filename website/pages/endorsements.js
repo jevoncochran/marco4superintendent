@@ -23,7 +23,6 @@ const endorsements = [
   "Green Party of San Diego County",
   "Green Party of San Francisco County",
   "Jason Boxer, Trustee Manhattan Beach Unified School District",
-  "Jennifer Blanco, Trustee San Bruno Park School District",
   "Labor Council for Latin American Advancement - Sacramento AFL-CIO Chapter",
   "Ricardo Quintana Favela, Trustee Fallbrook Union School District",
   "San Diego La Raza Lawyers Association",
