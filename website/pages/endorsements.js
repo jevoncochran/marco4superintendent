@@ -24,10 +24,14 @@ const endorsements = [
   "Green Party of San Francisco County",
   "Jason Boxer, Trustee Manhattan Beach Unified School District",
   "Labor Council for Latin American Advancement - Sacramento AFL-CIO Chapter",
-  "Ricardo Quintana Favela, Trustee Fallbrook Union School District",
   "San Diego La Raza Lawyers Association",
   "Teri L. Chavez, Trustee San Bruno Park School District",
   "Oscar Caralampio, Trustee Fallbrook Union High School District",
+  "Black is Back Coalition",
+  "Green Party of California",
+  "Peace and Freedom Party of California",
+  "Mike Hutchinson, Trustee Oakland Unified School District",
+  "San Diego Union Tribune",
 ];
 
 const Endorsements = () => {
